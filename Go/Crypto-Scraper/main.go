@@ -24,7 +24,7 @@ func main() {
 
 	c.OnHTML(".cmc-table__table-wrapper-outer .cmc-table-row", func(e *colly.HTMLElement) {
 		CCName := e.ChildText(".cmc-table__column-name--name")
-		CCPrice := e.ChildText(".sc-1ow4cwt-0")
+		CCPrice := e.ChildText(".cmc-link span")
 		cc := CryptoCurrency{CCName, CCPrice}
 		CryptoList = append(CryptoList, cc)
 	})
